@@ -2,10 +2,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from backend.ai_service import generate_response
-from backend.database import create_tables, save_history, get_history
-
-
+from ai_service import generate_response
+from database import create_tables, save_history, get_history
 # =========================================================
 # FastAPI Application
 # =========================================================
