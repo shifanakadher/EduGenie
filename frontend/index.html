@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduGenie - AI Educational Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon">🎓</span>
+            <span>EduGenie</span>
+        </div>
+
+        <p class="tagline">
+            Your AI-powered educational assistant
+        </p>
+    </header>
+
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- Welcome Section -->
+        <section class="hero">
+            <h1>Learn Smarter with EduGenie</h1>
+
+            <p>
+                Ask questions, understand concepts, create quizzes,
+                summarize text, and build personalized learning paths
+                with AI.
+            </p>
+        </section>
+
+
+        <!-- Feature Buttons -->
+        <section class="feature-section">
+
+            <h2>Choose a Learning Tool</h2>
+
+            <div class="feature-buttons">
+
+                <button
+                    class="feature-btn active"
+                    onclick="showFeature('ask')">
+                    💡 Ask Question
+                </button>
+
+                <button
+                    class="feature-btn"
+                    onclick="showFeature('explain')">
+                    📚 Explain Concept
+                </button>
+
+                <button
+                    class="feature-btn"
+                    onclick="showFeature('quiz')">
+                    📝 Generate Quiz
+                </button>
+
+                <button
+                    class="feature-btn"
+                    onclick="showFeature('summarize')">
+                    📄 Summarize
+                </button>
+
+                <button
+                    class="feature-btn"
+                    onclick="showFeature('learning-path')">
+                    🛤️ Learning Path
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Ask Question -->
+        <section
+            id="ask"
+            class="tool-card feature-panel">
+
+            <h2>💡 Ask a Question</h2>
+
+            <p>
+                Ask EduGenie any educational question.
+            </p>
+
+            <textarea
+                id="askInput"
+                placeholder="Example: Which is the largest ocean in the world?"
+            ></textarea>
+
+            <button
+                class="submit-btn"
+                onclick="askQuestion()">
+                Ask EduGenie
+            </button>
+
+            <div
+                id="askResult"
+                class="result hidden">
+            </div>
+
+        </section>
+
+
+        <!-- Explain Concept -->
+        <section
+            id="explain"
+            class="tool-card feature-panel hidden">
+
+            <h2>📚 Explain a Concept</h2>
+
+            <p>
+                Enter a difficult concept and EduGenie will explain it
+                in simple language.
+            </p>
+
+            <input
+                type="text"
+                id="explainInput"
+                placeholder="Example: Photosynthesis"
+            >
+
+            <button
+                class="submit-btn"
+                onclick="explainConcept()">
+                Explain Concept
+            </button>
+
+            <div
+                id="explainResult"
+                class="result hidden">
+            </div>
+
+        </section>
+
+
+        <!-- Quiz -->
+        <section
+            id="quiz"
+            class="tool-card feature-panel hidden">
+
+            <h2>📝 Generate a Quiz</h2>
+
+            <p>
+                Enter a topic and generate a 5-question quiz.
+            </p>
+
+            <input
+                type="text"
+                id="quizInput"
+                placeholder="Example: Pythagoras Theorem"
+            >
+
+            <button
+                class="submit-btn"
+                onclick="generateQuiz()">
+                Generate Quiz
+            </button>
+
+            <div
+                id="quizResult"
+                class="result hidden">
+            </div>
+
+        </section>
+
+
+        <!-- Summarize -->
+        <section
+            id="summarize"
+            class="tool-card feature-panel hidden">
+
+            <h2>📄 Summarize Text</h2>
+
+            <p>
+                Paste educational text and get a concise summary.
+            </p>
+
+            <textarea
+                id="summarizeInput"
+                placeholder="Paste your educational text here..."
+            ></textarea>
+
+            <button
+                class="submit-btn"
+                onclick="summarizeText()">
+                Summarize Text
+            </button>
+
+            <div
+                id="summarizeResult"
+                class="result hidden">
+            </div>
+
+        </section>
+
+
+        <!-- Learning Path -->
+        <section
+            id="learning-path"
+            class="tool-card feature-panel hidden">
+
+            <h2>🛤️ Create a Learning Path</h2>
+
+            <p>
+                Enter a subject and get a structured beginner-to-advanced
+                learning path.
+            </p>
+
+            <input
+                type="text"
+                id="learningPathInput"
+                placeholder="Example: SQL"
+            >
+
+            <button
+                class="submit-btn"
+                onclick="createLearningPath()">
+                Create Learning Path
+            </button>
+
+            <div
+                id="learningPathResult"
+                class="result hidden">
+            </div>
+
+        </section>
+
+
+        <!-- Loading -->
+        <div
+            id="loading"
+            class="loading hidden">
+
+            <div class="spinner"></div>
+
+            <p>EduGenie is thinking...</p>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <p>
+            © 2026 EduGenie | AI-Powered Educational Assistant
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
