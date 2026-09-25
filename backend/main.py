@@ -21,9 +21,10 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://127.0.0.1:5500",
-        "http://localhost:5500",
+   allow_origins=[
+    "http://127.0.0.1:5500",
+    "http://localhost:5500",
+    "https://edugenie-frontend-9jmt.onrender.com",
     ],
     allow_credentials=True,
     allow_methods=["*"],
